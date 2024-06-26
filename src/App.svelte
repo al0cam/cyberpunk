@@ -1,16 +1,6 @@
 <script lang="ts">
-import {store} from "./lib/Store.svelte.ts";
-let count = $state(0);
 </script>
 
-<main>
-  <div class="text-3xl">cancer</div>
-
-  <div class="text-3xl">Count: {count}</div>
-  <button on:click={() => count += 1}>Increment</button>
-  
-  <div>Count of cancer: {store.count}</div>
-  <button class="btn" on:click={() => store.increment()}>Increment</button>
-  <button class="btn btn-warning" on:click={() => store.decrement()}>Decrement</button>
-
+<main class="m-0 h-screen object-contain">
+  <span class="static bottom-0 right-0 -rotate-45 text-6xl ">Wake the fuck up, Samurai. We have a city to burn.</span>
 </main>
