@@ -3,7 +3,7 @@
 </script>
 
 <div class={_class}>
-  <div class="flex flex-row overflow-x-hidden gap-2">
+  <div class="flex flex-row overflow-x-hidden gap-2 p-1">
     <div class=" animate-marquee text-6xl whitespace-nowrap">
       {text}
     </div>
