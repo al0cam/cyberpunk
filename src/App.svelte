@@ -1,13 +1,18 @@
 <script lang="ts">
-  import Marquee from "./components/Marquee.svelte";
   import JohnnySilverhand from "./assets/Johnny.jpg";
-  import samurai_cropped from "./assets/samurai_cropped.png";
   import cyberpunk_logo from "./assets/cyberpunk_logo_cropped.png";
+  import samurai_cropped from "./assets/samurai_cropped.png";
+  import Marquee from "./components/Marquee.svelte";
   import ReverseMarquee from "./components/ReverseMarquee.svelte";
   const activeImage = JohnnySilverhand;
+
+
+  // TODO: use for animations
+  let leftWidth = 50;
+  let rightWidth = 50;
 </script>
 
-<main class="m-0 h-screen object-contain relative overflow-hidden">
+<main class="m-0 h-screen w-screen object-contain relative overflow-hidden">
   <img
     class="absolute top-0 left-0 z-0 opacity-20 object-cover object-top h-screen w-screen"
     src={activeImage}
@@ -22,14 +27,21 @@
     text="LAPD > DO NOT CROSS"
   />
 
-  <img
-    class="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 z-30 opacity-100 w-[100vh] rotate-90"
-    src={cyberpunk_logo}
-    alt="Cyberpunk 2077"
-  />
-  <img
-    class="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-100"
-    src={samurai_cropped}
-    alt="Samurai logo from Cyberpunk 2077"
-  />
+  <div class="absolute z-30 w-full h-full flex flex-row items-center">
+    <div class="z-30 w-1/2 overflow-hidden ">
+      <img
+        class=" w-svw max-w-none"
+        src={cyberpunk_logo}
+        alt="Cyberpunk 2077"
+      />
+    </div>
+
+    <div class=" z-30 w-1/2 h-full overflow-hidden">
+      <img
+        class="-translate-x-1/2 z-10 max-w-none h-full"
+        src={samurai_cropped}
+        alt="Samurai logo from Cyberpunk 2077"
+      />
+    </div>
+  </div>
 </main>
